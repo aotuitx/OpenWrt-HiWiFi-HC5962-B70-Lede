@@ -17,4 +17,4 @@ sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 
 
 #set competence
-#chmod -R 755 files
+chmod -R 755 files
