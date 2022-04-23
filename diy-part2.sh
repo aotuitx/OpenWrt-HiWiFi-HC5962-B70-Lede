@@ -14,6 +14,3 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
-sed -i 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' package\system\opkg\files\customfeeds.conf
-sed -i 's/option check_signature/#option check_signature/g' package\system\opkg\files\opkg.conf
-
