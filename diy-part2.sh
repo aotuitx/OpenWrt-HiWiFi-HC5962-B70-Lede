@@ -18,3 +18,7 @@ sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 
 #set competence
 chmod -R 755 files
+
+#echo '修改文件'
+#rm -rf package/base-files/files/etc/banner
+#cp -f ../banner package/base-files/files/etc/
