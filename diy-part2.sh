@@ -18,7 +18,8 @@ sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 sed -i "s/ipv6='1'/ipv6='0'/g" package/base-files/files/bin/config_generate
 #禁用WAN6生成
 sed -i 's/network_find_wan6/# network_find_wan6/g' package/base-files/files/lib/functions/network.sh
-
+#修改接口
+sed -i 's/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" "wan"/g' target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 
 #设置文件权限
 chmod -R 755 files/usr/bin/AdGuardHome
