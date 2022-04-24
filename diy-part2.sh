@@ -43,7 +43,7 @@ echo ''  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 echo 'msgid "NAS"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 echo 'msgstr "存储"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 #echo 'msgstr "存储"'  >> package/lean/default-settings/po/zh-cn/more.po
-sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-usb-printer/po/zh-cn/usb-printer.po
+sed -i 's/"网络存储"/"存储"/g' feeds/luci/applications/luci-app-usb-printer/po/zh-cn/usb-printer.po
 #sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
 #sed -i 's/cbi("qbittorrent"),_("qBittorrent")/cbi("qbittorrent"),_("BT下载")/g' package/lean/luci-app-qbittorrent/luasrc/controller/qbittorrent.lua
 #sed -i 's/"aMule设置"/"电驴下载"/g' package/lean/luci-app-amule/po/zh-cn/amule.po
