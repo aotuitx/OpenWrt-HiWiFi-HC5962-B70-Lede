@@ -47,3 +47,8 @@ chmod -R 755 files/usr/bin/xray
 #echo '修改文件'
 #rm -rf package/base-files/files/etc/banner
 #cp -f ../banner package/base-files/files/etc/
+
+# 添加核心温度的显示
+#sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+#sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+
