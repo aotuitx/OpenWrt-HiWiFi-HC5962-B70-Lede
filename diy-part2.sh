@@ -49,7 +49,7 @@ sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/contro
 sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
 
 #关闭自建私有源签名验证
-sed -i '90d' package/system/opkg/Makefile
+#sed -i '90d' package/system/opkg/Makefile
 
 #自动共享
 sed -i 's/a.default = "0"/a.default = "1"/g' ./feeds/luci/applications/luci-app-cifsd/luasrc/controller/cifsd.lua
