@@ -10,12 +10,14 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# Modify default IP
+# 修改默认IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
+#禁用IPv6 DHCP，包含单引号的sed外部直接用双引号
+sed -i "s/ipv6='1'/ipv6='0'/g" package/base-files/files/bin/config_generate
 #禁用WAN6生成
-sed -i 's/network_find_wan6/#network_find_wan6/g' package/base-files/files/lib/functions/network.sh
+sed -i 's/network_find_wan6/# network_find_wan6/g' package/base-files/files/lib/functions/network.sh
 
 
 #设置文件权限
