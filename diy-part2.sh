@@ -16,8 +16,13 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 
 
-#set competence
-#chmod -R 755 files
+#设置文件权限
+chmod -R 755 files/usr/bin/AdGuardHome
+chmod -R 755 files/usr/bin/dnsproxy
+chmod -R 755 files/usr/bin/kcptun-client
+chmod -R 755 files/usr/bin/trojan-go
+chmod -R 755 files/usr/bin/v2ray-plugin
+chmod -R 755 files/usr/bin/xray
 
 #echo '修改文件'
 #rm -rf package/base-files/files/etc/banner
