@@ -24,10 +24,13 @@ sed -i 's/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"/ucidef_set_interf
 sed -i 's/"lan3"/"lan4"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i 's/"lan2"/"lan3"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i 's/"lan1"/"lan2"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+#不会什么正规则，用的笨办法。
+#定位到'ports {'在下一行加入三个制表符'\ \t'\\t\\t，减少或增加一个'\\t'
 sed -i '/ports {/a\ \t\\t\\tport@0 {' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i '/port@0 {/a\ \t\\t\\t\\tstatus = "okay0";' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i '/status = "okay0";/a\ \t\\t\\t\\tlabel = "lan01";' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i '/label = "lan01";/a\ \t\\t\\t\};0' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+#在下一行加入空白行'/a\n'
 sed -i '/};0/a\n' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i 's/};0/};/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i 's/"lan01"/"lan1"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
