@@ -1,0 +1,5 @@
+		port@1 {
+		status = "okay";
+		label = "lan1";
+		};
+		
