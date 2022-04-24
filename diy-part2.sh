@@ -20,6 +20,18 @@ sed -i "s/ipv6='1'/ipv6='0'/g" package/base-files/files/bin/config_generate
 sed -i 's/network_find_wan6/# network_find_wan6/g' package/base-files/files/lib/functions/network.sh
 #修改接口
 sed -i 's/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" "wan"/g' target/linux/ramips/mt7621/base-files/etc/board.d/02_network
+#修改网卡名称
+sed -i 's/"lan3"/"lan4"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i 's/"lan2"/"lan3"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i 's/"lan1"/"lan2"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i '/ports {/a\ \t\\t\\tport@0 {' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i '/port@0 {/a\ \t\\t\\t\\tstatus = "okay0";' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i '/status = "okay0";/a\ \t\\t\\t\\tlabel = "lan01";' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i '/label = "lan01";/a\ \t\\t\\t\};0' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i '/};0/a\n' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i 's/};0/};/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i 's/"lan01"/"lan1"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
+sed -i 's/"okay0"/"okay"/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 
 # 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
 #chmod -R 755 package/lean/default-settings/po/zh-cn/more.po
