@@ -44,10 +44,12 @@ sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-usb-printer/po/zh-cn/
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-qos/po/zh-cn/qos.po
 sed -i 's/"服务"/"应用"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 
+# 修改应用过滤位置
+sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
+sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
 
 #自动共享
 sed -i 's/a.default = "0"/a.default = "1"/g' ./feeds/luci/applications/luci-app-cifsd/luasrc/controller/cifsd.lua
-
 
 #设置文件权限
 chmod -R 755 files/usr/bin/AdGuardHome
