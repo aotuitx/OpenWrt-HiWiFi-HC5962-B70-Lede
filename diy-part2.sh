@@ -16,8 +16,10 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 #禁用IPv6 DHCP，包含单引号的sed外部直接用双引号
 sed -i "s/ipv6='1'/ipv6='0'/g" package/base-files/files/bin/config_generate
+# 设置 DNS 解析端口
+sed -i '/1232/aoption port 53'  package/network/services/dnsmasq/files/dhcp.conf
 # 禁止解析 IPv6 DNS 记录
-sed  '/dnsmasq/aoption filter_aaaa 1'  package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/port 53/aoption filter_aaaa 1'  package/network/services/dnsmasq/files/dhcp.conf
 #不记录日志
 sed -i '/dnsmasq/aoption quietdhcp 1' package/network/services/dnsmasq/files/dhcp.conf
 #DHCP顺序分配 IP /etc/config/dhcp 中 config dnsmasq 字段下。
@@ -72,6 +74,14 @@ sed -i 's/"服务"/"应用"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 # 修改应用过滤位置
 sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
 sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
+
+#更改 AdGuard Home 配置文件位置
+sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
+sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/init.d/AdGuardHome
+#更改 AdGuard Home 打开 Web 端口
+sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
+sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/AdGuardHome_template.yaml
+
 
 #关闭自建私有源签名验证
 #sed -i '90d' package/system/opkg/Makefile
