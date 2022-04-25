@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: 查看
+    - name: 校验
       uses: actions/checkout@main
 
     - name: 初始化环境
