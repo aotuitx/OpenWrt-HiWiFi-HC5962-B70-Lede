@@ -16,6 +16,10 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 #禁用IPv6 DHCP，包含单引号的sed外部直接用双引号
 sed -i "s/ipv6='1'/ipv6='0'/g" package/base-files/files/bin/config_generate
+#DHCP顺序分配 IP /etc/config/dhcp  config dnsmasq 字段下。
+# option sequential_ip '1'
+# 禁止解析 IPv6 DNS 记录
+#option filter_aaaa '1'
 #禁用WAN6生成
 #sed -i 's/network_find_wan6/# network_find_wan6/g' package/base-files/files/lib/functions/network.sh
 #修改接口
