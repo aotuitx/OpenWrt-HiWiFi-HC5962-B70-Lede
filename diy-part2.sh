@@ -17,9 +17,9 @@ sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 #禁用IPv6 DHCP，包含单引号的sed外部直接用双引号
 sed -i "s/ipv6='1'/ipv6='0'/g" package/base-files/files/bin/config_generate
 # 设置 DNS 解析端口
-sed -i '/1232/aoption port 53'  package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/dnsmasq/aoption port 53'  package/network/services/dnsmasq/files/dhcp.conf
 # 禁止解析 IPv6 DNS 记录
-sed -i '/port 53/aoption filter_aaaa 1'  package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/dnsmasq/aoption filter_aaaa 1'  package/network/services/dnsmasq/files/dhcp.conf
 #不记录日志
 sed -i '/dnsmasq/aoption quietdhcp 1' package/network/services/dnsmasq/files/dhcp.conf
 #DHCP顺序分配 IP /etc/config/dhcp 中 config dnsmasq 字段下。
