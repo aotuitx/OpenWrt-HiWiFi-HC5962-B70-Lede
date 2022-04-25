@@ -16,12 +16,12 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 #禁用IPv6 DHCP，包含单引号的sed外部直接用双引号
 sed -i "s/ipv6='1'/ipv6='0'/g" package/base-files/files/bin/config_generate
-#DHCP顺序分配 IP /etc/config/dhcp 中 config dnsmasq 字段下。
-# option sequential_ip '1'
 # 禁止解析 IPv6 DNS 记录
-#option filter_aaaa '1'
+sed -i '/dnsmasq/a\ \t\\toption filter_aaaa '1'' package/network/services/dnsmasq/files/dhcp.conf
 #不记录日志
-#option quietdhcp '1'
+sed -i '/dnsmasq/a\ \t\\toption quietdhcp '1'' package/network/services/dnsmasq/files/dhcp.conf
+#DHCP顺序分配 IP /etc/config/dhcp 中 config dnsmasq 字段下。
+sed -i '/dnsmasq/a\ \t\\toption sequential_ip '1'' package/network/services/dnsmasq/files/dhcp.conf
 # 禁用内置的 IPv6 管理， /etc/config/network 中 config interface 'wan'、config interface 'lan' 字段下
 # option delegate '0'
 
