@@ -91,10 +91,10 @@ sed -i 's/a.default = "0"/a.default = "1"/g' ./feeds/luci/applications/luci-app-
 
 #设置文件权限
 chmod -R 755 files/usr/bin/AdGuardHome
-#chmod -R 755 files/usr/bin/dnsproxy
-#chmod -R 755 files/usr/bin/kcptun-client
-#chmod -R 755 files/usr/bin/trojan-go
-#chmod -R 755 files/usr/bin/v2ray-plugin
+chmod -R 755 files/usr/bin/dnsproxy
+chmod -R 755 files/usr/bin/kcptun-client
+chmod -R 755 files/usr/bin/trojan-go
+chmod -R 755 files/usr/bin/v2ray-plugin
 chmod -R 755 files/usr/bin/xray
 
 #echo '修改文件'
