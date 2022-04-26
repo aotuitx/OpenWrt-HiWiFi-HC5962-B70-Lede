@@ -31,14 +31,26 @@ dns:
   ratelimit_whitelist: []
   refuse_any: false
   upstream_dns:
-  - 119.29.29.29
-  - 223.5.5.5
-  - 114.114.114.114
-  - 8.8.8.8
+  - tls://1.12.12.12
+  - tls://223.6.6.6
+  - tls://8.8.8.8
+  - tls://120.53.53.53
+  - tls://223.5.5.5
+  - https://1.12.12.12/dns-query
+  - https://223.6.6.6/dns-query
+  - https://8.8.8.8/dns-query
+  - https://120.53.53.53/dns-query
+  - https://223.6.6.6/dns-query
   upstream_dns_file: ""
   bootstrap_dns:
-  - 119.29.29.29
-  - 223.5.5.5
+  - tls://1.12.12.12
+  - tls://223.6.6.6
+  - tls://120.53.53.53
+  - tls://223.5.5.5
+  - https://1.12.12.12/dns-query
+  - https://223.6.6.6/dns-query
+  - https://120.53.53.53/dns-query
+  - https://223.6.6.6/dns-query
   all_servers: false
   fastest_addr: false
   fastest_timeout: 1s
@@ -51,10 +63,10 @@ dns:
   trusted_proxies:
   - 127.0.0.0/8
   - ::1/128
-  cache_size: 4194304
+  cache_size: 50331648
   cache_ttl_min: 0
   cache_ttl_max: 0
-  cache_optimistic: false
+  cache_optimistic: true
   bogus_nxdomain: []
   aaaa_disabled: false
   enable_dnssec: false
@@ -75,7 +87,7 @@ dns:
   upstream_timeout: 10s
   local_domain_name: lan
   resolve_clients: true
-  use_private_ptr_resolvers: true
+  use_private_ptr_resolvers: false
   local_ptr_upstreams: []
 tls:
   enabled: false
@@ -121,15 +133,26 @@ filters:
   url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt
   name: My AdFilters
   id: 1650933069
-- enabled: true
+- enabled: false
   url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad-pc.txt
   name: My AdFilters（for PC）
   id: 1650933070
+- enabled: true
+  url: https://filters.adtidy.org/extension/ublock/filters/224.txt
+  name: 'CHN: AdGuard Chinese (中文)'
+  id: 1650944503
+- enabled: true
+  url: https://filters.adtidy.org/extension/ublock/filters/11.txt
+  name: AdGuard Mobile Ads filter
+  id: 1650944504
 whitelist_filters: []
 user_rules:
-- '! 2021-11-23 https://btbtt14.com'
-- btbtt14.com###wrapper_left_bg\ llll
-- btbtt14.com###wrapper_right_bg
+- '! 2022-04-25 https://www.btbtt20.com'
+- www.btbtt20.com###wrapper_left_bg\ llll
+- www.btbtt20.com###wrapper_right_bg
+- '||btbtt*.com/imgs.js?t='
+- '||51.la^'
+- '||cnzz.'
 - '! 2021-12-17 https://weibo.com'
 - weibo.com##.LoginPop_wrap_2DgKw
 - weibo.com##.woo-modal-mask
@@ -163,7 +186,13 @@ user_rules:
 - news.mydrivers.com##.dashang > span
 - news.mydrivers.com##.dashang > p
 - news.mydrivers.com##.xguan_pce
-- ""
+- '|t7z.cupid.ptqy.gitv.tv^$important'
+- '@@||g.live.com^$important'
+- '@@||s.click.taobao.com^$important'
+- '@@||ipassport.ele.me^$important'
+- '@@||wl.jd.com^$important'
+- '@@||activity.m.duiba.com.cn^$important'
+- '@@||tpush.html5.qq.com^$important'
 dhcp:
   enabled: false
   interface_name: ""
