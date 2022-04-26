@@ -72,6 +72,7 @@ sed -i 's/"网络存储"/"存储"/g' feeds/luci/applications/luci-app-usb-printe
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-openvpn/po/zh-cn/openvpn.po
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-qos/po/zh-cn/qos.po
 sed -i 's/"服务"/"应用"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
+sed -i 's/>serverchan/>微信推送/g' feeds/kenzo/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
 
 # 修改应用过滤位置
 sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
