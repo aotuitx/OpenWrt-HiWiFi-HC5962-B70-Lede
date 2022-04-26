@@ -81,6 +81,7 @@ sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/
 #更改 AdGuard Home 配置文件位置
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/init.d/AdGuardHome
+sed -i 's/none/redirect/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' package/feeds/packages/adguardhome/files/adguardhome.config
 sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' package/feeds/packages/adguardhome/files/adguardhome.init
 #更改 AdGuard Home 打开 Web 端口
