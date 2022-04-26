@@ -84,6 +84,8 @@ sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luc
 sed -i 's/none/redirect/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' package/feeds/packages/adguardhome/files/adguardhome.config
 sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' package/feeds/packages/adguardhome/files/adguardhome.init
+sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/kenzo/adguardhome/files/adguardhome.config
+sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/adguardhome/files/adguardhome.init
 #更改 AdGuard Home 打开 Web 端口
 sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/AdGuardHome_template.yaml
