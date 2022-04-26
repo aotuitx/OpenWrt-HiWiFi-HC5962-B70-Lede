@@ -26,7 +26,7 @@ sed -i '/dnsmasq/aoption quietdhcp 1' package/network/services/dnsmasq/files/dhc
 sed -i '/dnsmasq/aoption sequential_ip 1' package/network/services/dnsmasq/files/dhcp.conf
 # 禁用内置的 IPv6 管理， /etc/config/network 中 config interface 'wan'、config interface 'lan' 字段下
 # option delegate '0'
-#禁用 Smare DNS IPV6 服务器
+#禁用 Smare DNS IPV6 服务器，安装 luci-app-smartdns时有效
 #sed -i 's/ipv6_server = 1/ipv6_server = 0/g' feeds/kenzo/luci-app-smartdns/luasrc/controller/smartdns.lua
 
 #禁用WAN6生成
