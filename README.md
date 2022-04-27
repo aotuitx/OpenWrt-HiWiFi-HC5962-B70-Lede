@@ -14,7 +14,9 @@
 
 ### AdGuard Home 设置：
 
-#### 1、先去 AdGuard Home 配置里把端口改成：5353 (本镜像已包含)
+#### 注意：(本镜像已包含部分设置，如只需要AdGuard Home，启用它，按 DHCP/DNS 设置 ,然后 食用，DHCP分配的地址配置默认DNS就是网关了，不需要额外设置。)
+
+#### 1、先去 AdGuard Home 配置里把端口改成：5353 
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/AdGuardHome1.png?raw=true)
 
