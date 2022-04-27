@@ -1,6 +1,6 @@
 ### 路由管理地址：http://openwrt.lan 或者 http://10.0.0.1
 
-### 用户名：root   密码： password
+### 用户/密码： root/password
 
 ### 无线名称无密码：Openwrt 
 
