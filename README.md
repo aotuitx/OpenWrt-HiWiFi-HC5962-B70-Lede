@@ -11,7 +11,7 @@ Bypass + AdGuard Home 的食用方法记录：
 
 ### AdGuard Home 设置
 
-## 1、先去 AdGuard Home 配置里把端口改成：5353
+# 1、先去 AdGuard Home 配置里把端口改成：5353
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/AdGuardHome1.png?raw=true)
 
