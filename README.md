@@ -4,6 +4,8 @@
 
 ### 无线名称无密码：Openwrt 
 
+### 说明：没那么花里胡哨的功能，比较单一，家庭用足够。
+
 ![image](https://github.com/aotuitx/B70/blob/main/Images/Router1.png?raw=true)
 
 ### Bypass + AdGuard Home 的食用方法记录：
