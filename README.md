@@ -35,14 +35,23 @@
 ![image](https://github.com/aotuitx/B70/blob/main/Images/Bypass.png?raw=true)
 
 
-
-
-
-
-
-
-
-
+### 感谢：
+P3TERX
+Credits
+Microsoft Azure
+GitHub Actions
+OpenWrt
+Lean's OpenWrt
+tmate
+mxschmitt/action-tmate
+csexton/debugger-action
+Cowtransfer
+WeTransfer
+Mikubill/transfer
+softprops/action-gh-release
+ActionsRML/delete-workflow-runs
+dev-drprasad/delete-older-releases
+peter-evans/repository-dispatch
 
 
 ### 信息记录：
