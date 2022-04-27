@@ -75,12 +75,12 @@ sed -i 's/"网络存储"/"存储"/g' feeds/luci/applications/luci-app-usb-printe
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-qos/po/zh-cn/qos.po
 sed -i 's/"服务"/"应用"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 # 微信推送 英文名换成中文名
-#sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/kenzo/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
-#sed -i 's/>serverchan/>微信推送：/g' feeds/kenzo/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
+sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/kenzo/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
+sed -i 's/>serverchan/>微信推送：/g' feeds/kenzo/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
 sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/luci/applications/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
 sed -i 's/>serverchan/>微信推送：/g' feeds/luci/applications/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
 # 删除微信推送部分IP识别。
-#sed -i '1,4d' feeds/kenzo/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
+sed -i '1,4d' feeds/kenzo/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
 sed -i '1,4d' feeds/luci/applications/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
 
 # 修改应用过滤位置：取消集成，效果不是很理想。
@@ -93,8 +93,8 @@ sed -i 's/admin\/services/admin\/network/g' feeds/luci/applications/luci-app-upn
 
 
 #更改 AdGuard Home 配置文件位置
-#sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' package/feeds/packages/adguardhome/files/adguardhome.config
-#sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' package/feeds/packages/adguardhome/files/adguardhome.init
+sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' package/feeds/packages/adguardhome/files/adguardhome.config
+sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' package/feeds/packages/adguardhome/files/adguardhome.init
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/init.d/AdGuardHome
 sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/kenzo/adguardhome/files/adguardhome.config
