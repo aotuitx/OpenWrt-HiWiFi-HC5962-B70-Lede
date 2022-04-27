@@ -11,6 +11,18 @@ Luci-App-Bypass + AdGuard Home 的食用方法记录：
 如果想一起用，首先 AdGuard Home 的转发端口不能用：53
 如果不用Bypass，那端口是哪个就无所谓了。
 
+### AdGuard Home 设置
+![image](https://github.com/aotuitx/B70/blob/main/Images/AdGuardHome1.png?raw=true)
+
+![image](https://github.com/aotuitx/B70/blob/main/Images/AdGuardHome2.png?raw=true)
+
+### DHCP/DNS 设置
+
+
+![image](https://github.com/aotuitx/B70/blob/main/Images/DHCP.png?raw=true)
+
+### Bypass 设置
+![image](https://github.com/aotuitx/B70/blob/main/Images/Bypass.png?raw=true)
 
 
 
