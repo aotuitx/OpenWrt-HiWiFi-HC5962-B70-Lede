@@ -5,6 +5,8 @@
 ### 无线名称无密码：Openwrt 
 
 ### 说明：没那么花里胡哨的功能，比较单一，家庭用足够。
+### 注意：刷机时如果镜像校验失败先去官方下个底包在 Breed 中刷入在刷入这个镜像就可以了。
+### - [点击进入 Openwrt 底包下载地址：](https://firmware-selector.openwrt.org/?version=21.02.3&target=ramips%2Fmt7621&id=hiwifi_hc5962)
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/Router1.png?raw=true)
 
