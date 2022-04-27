@@ -85,6 +85,11 @@ sed -i '1,4d' feeds/luci/applications/luci-app-serverchan/root/usr/bin/servercha
 sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
 sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
 
+# 修改UPnP位置
+sed -i 's/"services"/"network"/g' feeds/luci/applications/luci-app-upnp/luasrc/controller/upnp.lua
+sed -i 's/admin\/services/admin\/network/g' feeds/luci/applications/luci-app-upnp/luasrc/view/upnp_status.htm
+
+
 #更改 AdGuard Home 配置文件位置
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/init.d/AdGuardHome
