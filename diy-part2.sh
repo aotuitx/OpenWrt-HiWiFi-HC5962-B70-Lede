@@ -26,14 +26,16 @@ sed -i '/dnsmasq/aoption quietdhcp 1' package/network/services/dnsmasq/files/dhc
 sed -i '/dnsmasq/aoption sequential_ip 1' package/network/services/dnsmasq/files/dhcp.conf
 # 禁用内置的 IPv6 管理， /etc/config/network 中 config interface 'wan'、config interface 'lan' 字段下
 sed -i "/proto='none'/aset network.\$1.delegate='0'"  package/base-files/files/bin/config_generate
-#禁用 Smare DNS IPV6 服务器，安装 luci-app-smartdns时有效
-#sed -i 's/ipv6_server = 1/ipv6_server = 0/g' feeds/kenzo/luci-app-smartdns/luasrc/controller/smartdns.lua
-
+#禁用 Smart DNS IPV6 服务器，安装 luci-app-smartdns时有效
+sed -i 's/ipv6_server = 1/ipv6_server = 0/g' feeds/kenzo/luci-app-smartdns/luasrc/controller/smartdns.lua
+# 修改Smart DNS 位置
+sed -i 's/"services"/"network"/g' feeds/kenzo/luci-app-smartdns/luasrc/controller/smartdns.lua
+sed -i 's/"services"/"network"/g' feeds/kenzo/luci-app-smartdns/luasrc/view/smartdns/smartdns_status.htm
 #禁用WAN6生成
 #sed -i 's/network_find_wan6/# network_find_wan6/g' package/base-files/files/lib/functions/network.sh
-#修改接口
+#修改接口-造成混乱，停用。
 #sed -i 's/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" "wan"/g' target/linux/ramips/mt7621/base-files/etc/board.d/02_network
-#修改网卡接口名称
+#修改网卡接口名称-造成混乱，停用。
 #sed -i 's/port@1/port@0/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 #sed -i 's/port@2/port@1/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 #sed -i 's/port@3/port@2/g' target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
@@ -81,9 +83,9 @@ sed -i 's/>serverchan/>微信推送：/g' feeds/luci/applications/luci-app-serve
 sed -i '1,4d' feeds/kenzo/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
 sed -i '1,4d' feeds/luci/applications/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
 
-# 修改应用过滤位置
-sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
-sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
+# 修改应用过滤位置：取消集成，效果不是很理想。
+# sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
+# sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
 
 # 修改UPnP位置
 sed -i 's/"services"/"network"/g' feeds/luci/applications/luci-app-upnp/luasrc/controller/upnp.lua
