@@ -1,12 +1,11 @@
-### 路由管理地址：http://openwrt.lan 或者 http://10.0.0.1
+### 路由管理地址：http://openwrt.lan 或者 http://10.0.0.1 用户/密码： root/password
 
-### 用户/密码： root/password
+### AdGuard Home 登录地址：http://10.0.0.1:80880 用户/密码：root
 
-### 无线名称无密码：Openwrt 
+### 无线 SSID 名称(无密码)：Openwrt 
 
-### AdGuard Home 登录地址：http://10.0.0.1:80880
 
-### 用户/密码：root
+
 
 ### 说明：没那么花里胡哨的功能，比较单一，家庭用足够。
 ### 注意：刷机时如果镜像校验失败先去官方下个底包在 Breed 中刷入在刷入这个镜像就可以了。
