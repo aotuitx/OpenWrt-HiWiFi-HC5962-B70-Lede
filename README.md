@@ -12,11 +12,9 @@
 
 ### Bypass + AdGuard Home 的食用方法记录：
 
-### 如果想一起用，首先 AdGuard Home 的转发端口不能用：53 ；如果不用Bypass，那端口是哪个就无所谓了。
+#### 注意：如果想一起用，首先 AdGuard Home 的转发端口不能用：53 ；如果不用Bypass，那端口是哪个就无所谓了。
 
-### AdGuard Home 设置：
-
-#### 注意：(本镜像已包含部分设置，如只需要AdGuard Home，启用它，按 DHCP/DNS 设置 ,然后 食用，DHCP分配的地址配置默认DNS就是网关了，不需要额外设置。)
+####     (本镜像已包含部分设置，如只需要AdGuard Home，启用它，按 DHCP/DNS 设置 ,然后 食用，DHCP分配的地址配置默认DNS就是网关了，不需要额外设置。)
 
 #### 1、先去 AdGuard Home 配置里把端口改成：5353 
 
