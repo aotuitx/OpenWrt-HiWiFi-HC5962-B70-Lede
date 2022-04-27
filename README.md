@@ -6,8 +6,8 @@
 
 Bypass + AdGuard Home 的食用方法记录：
 
-## 如果想一起用，首先 AdGuard Home 的转发端口不能用：53
-## 如果不用Bypass，那端口是哪个就无所谓了。
+### 如果想一起用，首先 AdGuard Home 的转发端口不能用：53
+### 如果不用Bypass，那端口是哪个就无所谓了。
 
 ### AdGuard Home 设置
 
@@ -15,19 +15,19 @@ Bypass + AdGuard Home 的食用方法记录：
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/AdGuardHome1.png?raw=true)
 
-## 2、接着去 AdGuard Home 控制台---基本设置---5353重定向---重定向53端口到AdGuardHome，完事了保存，运行。
+#### 2、接着去 AdGuard Home 控制台---基本设置---5353重定向---重定向53端口到AdGuardHome，完事了保存，运行。
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/AdGuardHome2.png?raw=true)
 
 ### DHCP/DNS 设置
 
-## 3、去 网络---DHCP/DNS---基本设置---DNS 转发 那里填上：127.0.0.1:5353（5353端口是AdGuard Home 的转发端口。）
+#### 3、去 网络---DHCP/DNS---基本设置---DNS 转发 那里填上：127.0.0.1:5353（5353端口是AdGuard Home 的转发端口。）
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/DHCP.png?raw=true)
 
 ### Bypass 设置
 
-## 如果启用 Bypass 直接按下图设置就行了，运行模式那里不要选：智能模式，这个模式总是搞成全局。
+#### 如果启用 Bypass 直接按下图设置就行了，运行模式那里不要选：智能模式，这个模式总是搞成全局。
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/Bypass.png?raw=true)
 
