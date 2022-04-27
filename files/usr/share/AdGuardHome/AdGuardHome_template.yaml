@@ -31,25 +31,41 @@ dns:
   ratelimit_whitelist: []
   refuse_any: false
   upstream_dns:
-  - tls://1.12.12.12
-  - tls://223.6.6.6
-  - tls://8.8.8.8
-  - tls://120.53.53.53
-  - tls://223.5.5.5
+  - '# 腾讯常规DNS'
+  - '#119.29.29.29'
+  - '# 腾讯 DoH DNS'
+  - '#https://doh.pub/dns-query'
   - https://1.12.12.12/dns-query
+  - '#https://120.53.53.53/dns-query'
+  - '# 腾讯 DoT DNS'
+  - '#tls//:dot.pub'
+  - '#tls//:1.12.12.12'
+  - '#tls//:120.53.53.53'
+  - '# 阿里常规DNS'
+  - '#223.5.5.5'
+  - '#223.6.6.6'
+  - '# 阿里 DoH DNS'
+  - '#https://dns.alidns.com/dns-query'
   - https://223.6.6.6/dns-query
-  - https://8.8.8.8/dns-query
-  - https://120.53.53.53/dns-query
-  - https://223.6.6.6/dns-query
+  - '#https://223.5.5.5/dns-query'
+  - '#阿里 DoT DNS'
+  - '#tls//:dns.alidns.com'
+  - '#tls//:223.6.6.6'
+  - '#tls//:223.5.5.5'
+  - '#谷歌常规DNS'
+  - '#8.8.8.8'
+  - '#8.8.4.4'
+  - '#谷歌 DoH DNS'
+  - '#https://dns.google/dns-query'
+  - https://8.8.4.4/dns-query
+  - '#https://8.8.8.8/dns-query'
+  - '#谷歌 DoT DNS'
+  - '#tls://dns.google'
+  - '#tls://8.8.4.4'
+  - '#tls//:8.8.8.8'
   upstream_dns_file: ""
   bootstrap_dns:
-  - tls://1.12.12.12
-  - tls://223.6.6.6
-  - tls://120.53.53.53
-  - tls://223.5.5.5
   - https://1.12.12.12/dns-query
-  - https://223.6.6.6/dns-query
-  - https://120.53.53.53/dns-query
   - https://223.6.6.6/dns-query
   all_servers: false
   fastest_addr: false
