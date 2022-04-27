@@ -1,4 +1,4 @@
-感谢各位18CM的先遣者，全部参考各位18CM的先遣者，然后自己理解瞎编一通还能运行。
+感谢各位18cm的先遣者，全部参考各位18cm的先遣者，然后自己理解瞎编一通还能运行。
 
 ### 路由管理地址：http://openwrt.lan 或者 http://10.0.0.1
 
@@ -12,7 +12,7 @@
 
 ### 如果想一起用，首先 AdGuard Home 的转发端口不能用：53 ；如果不用Bypass，那端口是哪个就无所谓了。
 
-### AdGuard Home 设置
+### AdGuard Home 设置：
 
 #### 1、先去 AdGuard Home 配置里把端口改成：5353 (本镜像已包含)
 
@@ -22,13 +22,13 @@
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/AdGuardHome2.png?raw=true)
 
-### DHCP/DNS 设置
+### DHCP/DNS 设置：
 
 #### 3、去 网络---DHCP/DNS---基本设置---DNS 转发 那里填上：127.0.0.1:5353（5353端口是AdGuard Home 的转发端口。）
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/DHCP.png?raw=true)
 
-### Bypass 设置
+### Bypass 设置：
 
 #### 如果启用 Bypass 直接按下图设置就行了，运行模式那里不要选：智能模式，这个模式总是搞成全局。
 
