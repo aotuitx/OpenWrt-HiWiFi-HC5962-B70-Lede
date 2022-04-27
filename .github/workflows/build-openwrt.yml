@@ -70,35 +70,7 @@ jobs:
 
     - name: 更新 feeds 应用包
       run: cd openwrt && ./scripts/feeds update -a
-      
-    - name: 去除重复应用包
-      run: |
-         cd openwrt
-         sudo rm -rf ./feeds/packages/net/adguardhome
-         sudo rm -rf ./feeds/kenzo/aliyundrive-webdav
-         sudo rm -rf ./feeds/kenzo/luci-app-aliyundrive-webdav
-         sudo rm -rf ./feeds/kenzo/luci-app-diskman
-         sudo rm -rf ./feeds/kenzo/luci-app-dockerman
-         sudo rm -rf ./feeds/kenzo/luci-app-easymesh
-         sudo rm -rf ./feeds/kenzo/luci-app-passwall
-         sudo rm -rf ./feeds/kenzo/luci-app-passwall2
-         sudo rm -rf ./feeds/kenzo/luci-app-pushbot
-         sudo rm -rf ./feeds/kenzo/luci-app-serverchan
-         sudo rm -rf ./feeds/packages/net/smartdns/
-         sudo rm -rf ./feeds/packages/net/microsocks/
-         sudo rm -rf ./feeds/kenzo/mosdns
-         sudo rm -rf ./feeds/kenzo/redsocks2
-         sudo rm -rf ./feeds/kenzo/luci-lib-fs
-         sudo rm -rf ./feeds/kenzo/luci-theme-argon
-         sudo rm -rf ./feeds/kenzo/luci-app-unblockneteasemusic
-         sudo rm -rf ./feeds/kenzo/UnblockNeteaseMusic
-         sudo rm -rf ./feeds/kenzo/luci-app-aliyundrive-webdav
-         sudo rm -rf ./feeds/kenzo/aliyundrive-webdav
-         sudo rm -rf ./feeds/small/dns2socks/
-         sudo rm -rf ./feeds/small/ipt2socks
-         sudo rm -rf ./feeds/small/pdnsd-alt
-         sudo rm -rf ./feeds/small/shadowsocks-libev
-         
+               
     - name: 安装 feeds 应用包
       run: cd openwrt && ./scripts/feeds install -a
 
