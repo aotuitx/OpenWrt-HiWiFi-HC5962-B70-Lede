@@ -2,6 +2,8 @@
 
 ### 路由管理地址：http://openwrt.lan 或者 http://10.0.0.1
 
+### 用户名：root   密码： password
+
 ### 无线名称无密码：Openwrt 
 
 ![image](https://github.com/aotuitx/B70/blob/main/Images/Router1.png?raw=true)
