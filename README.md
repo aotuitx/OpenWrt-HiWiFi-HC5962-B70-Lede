@@ -7,8 +7,6 @@
 Bypass + AdGuard Home 的食用方法记录：
 
 ## 如果想一起用，首先 AdGuard Home 的转发端口不能用：53
-## 如果想一起用，首先 AdGuard Home 的转发端口不能用：53
-## 如果想一起用，首先 AdGuard Home 的转发端口不能用：53
 ## 如果不用Bypass，那端口是哪个就无所谓了。
 
 ### AdGuard Home 设置
