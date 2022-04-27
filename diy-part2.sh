@@ -25,7 +25,7 @@ sed -i '/dnsmasq/aoption quietdhcp 1' package/network/services/dnsmasq/files/dhc
 #DHCP顺序分配 IP /etc/config/dhcp 中 config dnsmasq 字段下。
 sed -i '/dnsmasq/aoption sequential_ip 1' package/network/services/dnsmasq/files/dhcp.conf
 # 禁用内置的 IPv6 管理， /etc/config/network 中 config interface 'wan'、config interface 'lan' 字段下
-# option delegate '0'
+sed "/proto='none'/aset network.\$1.delegate='0'"  package/base-files/files/bin/config_generate
 #禁用 Smare DNS IPV6 服务器，安装 luci-app-smartdns时有效
 #sed -i 's/ipv6_server = 1/ipv6_server = 0/g' feeds/kenzo/luci-app-smartdns/luasrc/controller/smartdns.lua
 
