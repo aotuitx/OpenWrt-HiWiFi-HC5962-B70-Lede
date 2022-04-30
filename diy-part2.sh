@@ -105,6 +105,8 @@ sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luc
 sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/AdGuardHome_template.yaml
 
+#修改 上网时间控制名称为上网计划
+sed -i 's/上网时间控制/上网计划/g' package/feeds/luci/luci-app-accesscontrol/po/zh-cn/mia.po
 
 #关闭自建私有源签名验证
 #sed -i '90d' package/system/opkg/Makefile
