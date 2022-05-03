@@ -96,8 +96,6 @@ jobs:
          sudo rm -rf ./feeds/small/pdnsd-alt
          sudo rm -rf ./feeds/small/shadowsocks-libev
          sudo rm -rf ./feeds/packages/net/adguardhome/files/
-         sudo rm -rf ./feeds/packages/net/redsocks/files/
-         sudo rm -rf ./feeds/packages/net/redsocks/patches/
          
                
     - name: 安装 feeds 应用包
