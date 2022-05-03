@@ -93,20 +93,22 @@ sed -i 's/admin\/services/admin\/network/g' feeds/luci/applications/luci-app-upn
 
 
 #更改 AdGuard Home 配置文件位置
-sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/packages/net/adguardhome/files/adguardhome.config
-sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/packages/net/adguardhome/files/adguardhome.init
+#sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/packages/net/adguardhome/files/adguardhome.config
+#sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/packages/net/adguardhome/files/adguardhome.init
 ##sed -i 's/etc\/config\/adguardhome/etc\/config\/AdGuardHome/g' feeds/packages/net/adguardhome/Makefile
 ##sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/packages/net/adguardhome/Makefile
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/init.d/AdGuardHome
 ##sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/Makefile
-sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/kenzo/adguardhome/files/adguardhome.config
-sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/adguardhome/files/adguardhome.init
+#sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/kenzo/adguardhome/files/adguardhome.config
+#sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/adguardhome/files/adguardhome.init
 #修改 ADGuard Home 重定向模式为 重定向53端口到AdGuard Home
 #sed -i 's/none/redirect/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 #更改 AdGuard Home 打开 Web 端口
 sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
 sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/AdGuardHome_template.yaml
+#删除adguardhome默认配置文件
+sed -i '/define Package\/adguardhome\/install/,+7d' feeds/packages/net/adguardhome/Makefile
 
 #修改 上网时间控制名称为上网计划
 sed -i 's/上网时间控制/上网计划/g' package/feeds/luci/luci-app-accesscontrol/po/zh-cn/mia.po
