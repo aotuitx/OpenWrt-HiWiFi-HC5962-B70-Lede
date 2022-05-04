@@ -91,6 +91,8 @@ sed -i '1,4d' feeds/luci/applications/luci-app-serverchan/root/usr/bin/servercha
 sed -i 's/"services"/"network"/g' feeds/luci/applications/luci-app-upnp/luasrc/controller/upnp.lua
 sed -i 's/admin\/services/admin\/network/g' feeds/luci/applications/luci-app-upnp/luasrc/view/upnp_status.htm
 
+# 删除IPv6防火墙策略
+sed -i '/ip6tables/d' package/lean/default-settings/files/zzz-default-settings
 
 #更改 AdGuard Home 配置文件位置
 #sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/packages/net/adguardhome/files/adguardhome.config
