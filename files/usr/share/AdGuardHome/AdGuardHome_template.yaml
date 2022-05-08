@@ -122,45 +122,29 @@ tls:
   private_key_path: ""
 filters:
 - enabled: true
-  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-  name: AdGuard DNS filter
-  id: 1628750870
+  url: https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
+  name: NoCoin Filter List
+  id: 1651795231
 - enabled: true
   url: https://anti-ad.net/easylist.txt
   name: 'CHN: anti-AD'
-  id: 1628750871
-- enabled: false
-  url: https://cdn.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt
-  name: 乘风广告过滤规则
-  id: 1650933064
-- enabled: false
-  url: https://cdn.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt
-  name: 乘风视频过滤规则
-  id: 1650933065
-- enabled: true
-  url: https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
-  name: NoCoin Filter List
-  id: 1650933067
-- enabled: true
-  url: https://easylist.to/easylist/easylist.txt
-  name: EasyList
-  id: 1650933068
-- enabled: false
-  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt
-  name: My AdFilters
-  id: 1650933069
-- enabled: false
-  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad-pc.txt
-  name: My AdFilters（for PC）
-  id: 1650933070
+  id: 1651795232
 - enabled: true
   url: https://filters.adtidy.org/extension/ublock/filters/224.txt
   name: 'CHN: AdGuard Chinese (中文)'
-  id: 1650944503
+  id: 1651795233
 - enabled: true
   url: https://filters.adtidy.org/extension/ublock/filters/11.txt
   name: AdGuard Mobile Ads filter
-  id: 1650944504
+  id: 1651795234
+- enabled: true
+  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad-pc.txt
+  name: My AdFilters（for PC）
+  id: 1651795235
+- enabled: false
+  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt
+  name: My AdFilters
+  id: 1651795236
 whitelist_filters: []
 user_rules:
 - '! 2022-04-25 https://www.btbtt20.com'
