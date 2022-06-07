@@ -13,7 +13,7 @@ web_session_ttl: 720
 dns:
   bind_hosts:
   - 0.0.0.0
-  port: 5353
+  port: 53
   statistics_interval: 30
   querylog_enabled: true
   querylog_file_enabled: true
@@ -121,11 +121,11 @@ tls:
   certificate_path: ""
   private_key_path: ""
 filters:
-- enabled: true
+- enabled: false
   url: https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
   name: NoCoin Filter List
   id: 1651795231
-- enabled: true
+- enabled: false
   url: https://anti-ad.net/easylist.txt
   name: 'CHN: anti-AD'
   id: 1651795232
@@ -145,6 +145,18 @@ filters:
   url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt
   name: My AdFilters
   id: 1651795236
+- enabled: false
+  url: https://adaway.org/hosts.txt
+  name: adaway
+  id: 1652652094
+- enabled: false
+  url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
+  name: Yoyos Hosts
+  id: 1652652095
+- enabled: true
+  url: https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt
+  name: adgk手机去广告规则
+  id: 1652652096
 whitelist_filters: []
 user_rules:
 - '! 2022-04-25 https://www.btbtt20.com'
@@ -193,6 +205,26 @@ user_rules:
 - '@@||wl.jd.com^$important'
 - '@@||activity.m.duiba.com.cn^$important'
 - '@@||tpush.html5.qq.com^$important'
+- '@@||gia.jd.com^$important'
+- '@@||s.click.tmall.com^$important'
+- '@@||api.e.kuaishou.com^$important'
+- '@@||api2.e.kuaishou.com^$important'
+- '@@||ali.static.yximgs.com^$important'
+- '@@||static.yximgs.com^$important'
+- '@@||h1.static.yximgs.com^$important'
+- '@@||logservice1.hicloud.com^$important'
+- '@@||cs02-pps-drcn.dbankcdn.com^$important'
+- '@@||uland.taobao.com^$important'
+- '@@||cloud.video.taobao.com^$important'
+- '@@||mo.m.tmall.com^$important'
+- '@@||p1-pro.a.yximgs.com^$important'
+- '@@||p1.a.yximgs.com^$important'
+- '@@||ku.m.taobao.com^$important'
+- '@@||odin.re.taobao.com^$important'
+- '@@||jifen.2345.com^$important'
+- '@@||bumblebee.2345.cn^$important'
+- '@@||wangpai.2345.cn^$important'
+- ""
 dhcp:
   enabled: false
   interface_name: ""
